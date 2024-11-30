@@ -1,0 +1,75 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Full Black Background */
+#intro-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* LINK START Button */
+#link-start {
+    font-size: 2rem;
+    color: #00c0ff; /* Neon blue */
+    padding: 10px 20px;
+    cursor: pointer;
+    animation: blink 1s infinite, glow 2s infinite alternate;
+    margin-bottom: 50px;
+    transition: transform 0.2s ease;
+    text-shadow: 0 0 10px #00c0ff, 0 0 20px #00c0ff, 0 0 30px #00c0ff;
+}
+
+#link-start:hover {
+    transform: scale(1.1);
+    text-shadow: 0 0 15px #00c0ff, 0 0 30px #00c0ff, 0 0 45px #00c0ff;
+}
+
+/* Blinking Effect */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Glowing Effect */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #00c0ff, 0 0 20px #00c0ff, 0 0 30px #00c0ff;
+    }
+    to {
+        text-shadow: 0 0 15px #00eaff, 0 0 30px #00eaff, 0 0 50px #00eaff;
+    }
+}
+
+/* Main Content */
+#main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background: linear-gradient(to bottom, #1a1a1a, black);
+    color: white;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+/* Utility */
+.hidden {
+    display: none;
+}
